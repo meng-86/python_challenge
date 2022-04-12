@@ -32,8 +32,8 @@ import csv
 # Load the data 
 # files I need to load
 
-cvspath = os.path.join("Resources","budget_data.csv")
-pathout = os.path.join("budget_analysis.txt")
+csvpath = os.path.join('PyBank','Resources')
+pathout = os.path.join('PyBank','Resources')
 
 # Define variables for PyBank date and Profit/Losses counting 
 
@@ -48,8 +48,8 @@ greatest_decrease = ["", 99999999999]
 
 # Read file budget_data csv 
 
-with open(cvspath) as revenueData:
-    reader= csv.DictReader(revenueData)
+with open(csvpath) as revenueData:
+    reader= csv.reader(revenueData, delimiter=",")
 
 # Using loop to calculate the number of month in total 
 
